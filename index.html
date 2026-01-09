@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fragrance Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-label="Fragrance Finder logo">
+          <!-- simple logo svg -->
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#7c5cff"/>
+                <stop offset="1" stop-color="#3ee6b1"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#g)" d="M32 4c10.5 0 19 8.5 19 19 0 11-9.5 18.5-19 37C22.5 41.5 13 34 13 23 13 12.5 21.5 4 32 4z"/>
+            <circle cx="32" cy="23" r="7.5" fill="rgba(0,0,0,.25)"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="brand-title">Fragrance Finder</div>
+          <div class="brand-sub">Find popular, cheap, niche & hidden gem fragrances with clean filters.</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="ghost" href="#conduct">Code of Conduct</a>
+      </div>
+    </div>
+
+    <div class="toolrow">
+      <div class="toolrow-inner">
+        <div class="searchWrap">
+          <input id="search" type="search" placeholder="Search: JPG, Valentino, vanilla, niche, oud..." />
+        </div>
+
+        <select id="sort">
+          <option value="popular">Sort: Popular</option>
+          <option value="cheap">Sort: Cheapest</option>
+          <option value="az">Sort: A → Z</option>
+        </select>
+
+        <select id="currency">
+          <option value="CAD">Currency: CAD</option>
+          <option value="USD">Currency: USD</option>
+        </select>
+
+        <select id="budget">
+          <option value="">Budget: Any</option>
+          <option value="50">Under 50</option>
+          <option value="100">Under 100</option>
+          <option value="150">Under 150</option>
+          <option value="200">Under 200</option>
+          <option value="300">Under 300</option>
+        </select>
+
+        <label class="check">
+          <input type="checkbox" id="strongOnly" />
+          Strong only
+        </label>
+      </div>
+
+      <nav class="tabs" id="tabs"></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="heroText">
+        <h1>Smell good without overpaying.</h1>
+        <p>Browse sections, filter by price, and open deals instantly. Save favorites for later.</p>
+        <div class="heroBadges">
+          <span class="badge">USD + CAD</span>
+          <span class="badge">3 buy links each</span>
+          <span class="badge">Favorites</span>
+        </div>
+      </div>
+
+      <div class="heroCard">
+        <div class="heroCardTitle">Quick tip</div>
+        <div class="heroCardBody">
+          Try <strong>Hidden Gems</strong> + <strong>Under 150</strong> for gatekept bangers.
+        </div>
+      </div>
+    </section>
+
+    <div class="sectionHead">
+      <div>
+        <h2 id="sectionTitle">Loading…</h2>
+        <p id="sectionDesc" class="muted"></p>
+      </div>
+      <div class="count"><span id="countNum">0</span> results</div>
+    </div>
+
+    <div id="grid" class="grid"></div>
+
+    <div class="loadMoreWrap">
+      <button class="ghost" id="loadMoreBtn" type="button">Load more</button>
+    </div>
+
+    <section id="conduct" class="conduct">
+      <h2>Code of Conduct</h2>
+      <div class="muted">
+        <ul>
+          <li>No counterfeit promotion and no illegal listings.</li>
+          <li>Use brand names only to identify products.</li>
+          <li>Disclose affiliate links if you add them.</li>
+          <li>Do not collect or sell user data without consent.</li>
+          <li>Prices are estimates so verify on the store page.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerInner">
+        <div>
+          <div class="footerTitle">Published by <strong>Max Martens</strong></div>
+          <div class="muted small">Fragrance Finder • built with HTML CSS JS</div>
+        </div>
+        <div class="muted small">
+          Some links may be affiliate links later. This can earn a commission at no extra cost to you.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts (must be in this order) -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
